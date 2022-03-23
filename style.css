@@ -1,0 +1,92 @@
+h1 {
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 50px;
+}  
+
+ul {
+    margin-left: 70px;
+}
+
+p {
+    margin-left: 70px;
+    padding: 10px;
+}
+
+.tema-claro {
+    background-image: linear-gradient(90deg,white,black);
+}
+
+
+
+:root { /*1- Adicionando algumas constantes á raiz da página, para dar suporte ao tema escuro.*/
+    --white: white;
+    --black: #000000;
+}
+
+/* O seletor de :root representa o elemento <html> na página HTML.
+
+Para esse tipo de tarefa, uma melhor prática é definir um conjunto de variáveis CSS globais no elemento :root.
+
+Aqui, você define três variáveis de cor anexadas à raiz da página. */
+
+
+/* 2 - No final do arquivo CSS, adicione o seletor de dark-theme e atualize o seletor de light-theme.*/
+
+
+
+/* 3 - Em seguida, após o seletor de :root no arquivo CSS, adicione o seguinte código para substituir 
+o seletor de body atual:*/
+* {
+    color: var(--fontColor);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+}
+
+
+/*O seletor * é universal e se aplica a todos os elementos da página (exceto quando um seletor de elemento
+ mais específico o substitui).
+
+Aqui, você o usa com o objetivo de definir a propriedade de cor(color) padrão para todos os elementos de 
+página.
+
+Para as propriedades color e background, especifique as variáveis definidas nos seletores de tema claro 
+e escuro.
+
+4 - Remova o seletor de #msg em seu CSS, para que a mesma fonte possa ser aplicada a todos os elementos.
+
+5 - Para exibir o tema escuro, edite manualmente o tema padrão no elemento <body> como tema escuro (dark-theme) e exiba a página no navegador.
+
+*/
+
+.tema-escuro {
+    --bg: linear-gradient(90deg,var(--black),var(--white));
+    --fontColor: var(--white);
+    --btnBg:var(--white);
+    --btnFontColor:var(--black);
+}
+.tema-claro {
+    --bg: linear-gradient(90deg,var(--white),var(--black));
+    --fontColor:var(--black);
+    --btnBg:var(--black);
+    --btnFontColor:var(--white);
+}
+
+.btn {
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+.btn:focus {
+    outline-style: none;
+}

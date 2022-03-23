@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <noscript>Você precisa habilitar o JavaScript pra ver o site inteiro!</noscript> <!--pode ser usado para mostrar uma mensagem, caso o JavaScript seja desativado-->
+    <style language="css">
+        /*CSS interno : editar elementos HTML.*/
+        h1 {
+            padding: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .lista, p {
+        font-family: Arial, sans-serif;
+        list-style-type: square;
+        }
+    </style>
+</head>
+<body class="tema-escuro">
+    <main>
+        <header>
+            <h1>Lista de Tarefas</h1>
+            <p>Tarefas atuais:</p>
+            <ul>
+                <li class="lista">Aprender mais sobre DOM</li>
+                <li class="lista">Aprofundar no aprendizado de JavaScript</li>
+                <li class="lista">Saber programar o mais eficientemente possível</li>
+                <li class="lista">Socializar mais com o cliente</li>
+                <li class="lista">Tentar sempre ser a melhor versão de mim mesma</li>
+                <li>Permitir mudança de tema</li>
+                <button class="btn">Tema-escuro</button>
+            </ul>
+        </header>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
